@@ -23,8 +23,8 @@
 							[
 								"testimonial",
 								{
-									"__TYPE__": "LinkContent",
 									"key": "a9e1263f-ddaa-4028-a3dd-d0c70db3774a",
+									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "DocumentLink",
 										"id": "mock_document_id"
