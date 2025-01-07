@@ -34,8 +34,11 @@ const CallToAction = ({ slice }: CallToActionProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div className="max-w-4xl shadow-xl md:px-12 px-4 py-12 grid place-items-center rounded-lg bg-gradient-to-tr from-cyan-50 via-white to-emerald-50">
-        <PrismicRichText components={components} field={slice.primary.heading} />
+      <div className="max-w-4xl shadow-xl md:px-12 px-4 py-12 grid place-items-center rounded-lg bg-gradient-to-tr from-cyan-50 via-white to-emerald-50 mx-auto">
+        <PrismicRichText
+          components={components}
+          field={slice.primary.heading}
+        />
         <PrismicRichText components={components} field={slice.primary.body} />
         <Button field={slice.primary.button_link}>
           {slice.primary.button_text}
