@@ -21,18 +21,18 @@ const nunito_Sans = Nunito_Sans({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  
   const client = createClient();
 
-  const settings = await client.getSingle("settings")
- 
+  const settings = await client.getSingle("settings");
+
   return {
     title: settings.data.site_title || "Flowrise Fallback",
-    description: settings.data.meta_description || "Flowrise is the relaxing app you need",
+    description:
+      settings.data.meta_description || "Flowrise is the relaxing app you need",
     openGraph: {
       images: [settings.data.og_image.url || ""],
     },
-  }
+  };
 }
 
 export default function RootLayout({
@@ -45,7 +45,8 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
-        <Footer/>
+        <Footer />
+        <div className="fixed bg-gradient-to-tr from-emerald-50 to-cyan-50 z-[-1] inset-0 opacity-50" />
       </body>
     </html>
   );
