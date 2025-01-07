@@ -1,13 +1,13 @@
-import type { Metadata, ResolvingMetadata } from "next";
-import { Nunito, Nunito_Sans } from "next/font/google";
-import clsx from "clsx";
 import { PrismicPreview } from "@prismicio/next";
+import clsx from "clsx";
+import type { Metadata } from "next";
+import { Nunito, Nunito_Sans } from "next/font/google";
 
 import "./globals.css";
 
-import { createClient, repositoryName } from "@/prismicio";
-import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Header from "@/components/header";
+import { createClient, repositoryName } from "@/prismicio";
 
 const nunito = Nunito({
   subsets: ["latin"],
